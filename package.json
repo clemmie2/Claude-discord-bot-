@@ -1,0 +1,27 @@
+{
+  "name": "claude-discord-bot-",
+  "version": "1.0.0",
+  "description": "A discord bot to help you for coding for free in discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clemmie2/Claude-discord-bot-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/clemmie2/Claude-discord-bot-/issues"
+  },
+  "homepage": "https://github.com/clemmie2/Claude-discord-bot-#readme",
+  "dependencies": {
+    "axios": "^1.16.0",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2",
+    "sqlite3": "^6.0.1"
+  }
+}
