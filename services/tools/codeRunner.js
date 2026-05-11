@@ -1,14 +1,17 @@
-const vm = require("vm");
+const { runCode } = require("./codeRunner");
+const { webSearch } = require("./webSearch");
 
-function runCode(code) {
-  try {
-    const script = new vm.Script(code);
-    const context = vm.createContext({});
-    const result = script.runInContext(context);
-    return String(result);
-  } catch (e) {
-    return "Error: " + e.message;
+async function runTool(tool, input) {
+  switch (tool) {
+    case "code":
+      return runCode(input);
+
+    case "web":
+      return await webSearch(input);
+
+    default:
+      return "Invalid tool request.";
   }
 }
 
-module.exports = { runCode };
+module.exports = { runTool };
