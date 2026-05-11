@@ -6,25 +6,24 @@ module.exports = {
     temperature: 0.7
   },
 
-  memory: {
-    maxMessages: 20
-  },
-
   behavior: {
     cooldownMs: 4000,
-    replyToMentions: true,
     replyToMessages: true
   },
 
   whitelist: {
-    enabled: true,
-    channels: [] // add channel IDs here
+    enabled: false,
+    channels: [] // add allowed channel IDs here
+  },
+
+  memory: {
+    maxMessages: 20
   },
 
   personas: {
-    claude: "You are Claude-like: precise, structured, calm, highly helpful.",
-    strict: "You are extremely strict, concise, minimal wording, no fluff.",
-    coder: "You are a senior software engineer. Focus on clean code and architecture.",
+    claude: "You are a precise, structured, helpful AI assistant like Claude.",
+    strict: "You are extremely concise. No extra words.",
+    coder: "You are a senior software engineer. Focus on clean production code.",
     assistant: "You are a general helpful AI assistant."
   },
 
