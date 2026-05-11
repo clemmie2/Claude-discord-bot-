@@ -10,10 +10,8 @@ const client = new Client({
 });
 
 const messageCreate = require("./events/messageCreate");
-const interactionCreate = require("./events/interactionCreate");
 
 client.on("messageCreate", (m) => messageCreate(client, m));
-client.on("interactionCreate", (i) => interactionCreate(client, i));
 
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
