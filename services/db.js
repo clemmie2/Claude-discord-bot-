@@ -10,6 +10,13 @@ db.serialize(() => {
   `);
 
   db.run(`
+    CREATE TABLE IF NOT EXISTS server_memory (
+      guildId TEXT PRIMARY KEY,
+      history TEXT
+    )
+  `);
+
+  db.run(`
     CREATE TABLE IF NOT EXISTS persona (
       userId TEXT PRIMARY KEY,
       persona TEXT
